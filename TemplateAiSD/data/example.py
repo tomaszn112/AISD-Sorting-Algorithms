@@ -1,24 +1,14 @@
 import sys
 import random
 from insertionSort import insertionSort
-
-# 2. Sortowanie przez wybieranie (Selection Sort)
-def selection_sort(arr):
-    data = arr.copy()
-    for i in range(len(data)):
-        min_idx = i
-        for j in range(i + 1, len(data)):
-            if data[min_idx] > data[j]:
-                min_idx = j
-        data[i], data[min_idx] = data[min_idx], data[i]
-    return data
+from selectionSort import selectionSort
 
 # GŁÓWNY ROUTER ALGORYTMÓW
 def sort_using_algorithm(data, algorithm):
     if algorithm == 1:
         return insertionSort(data)
     elif algorithm == 2:
-        return selection_sort(data)
+        return selectionSort(data)
     else:
         print("Nieznany algorytm! Używam domyślnego Pythona.")
         return sorted(data)
