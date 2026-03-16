@@ -1,8 +1,12 @@
 import sys
+import insertionSort
+
 
 def sort_using_algorithm(data, algorithm):
     # This function takes the algorithm identifier as input
     # However, it always uses the sorted function in Python
+    if algorithm == 0:
+        return insertionSort(data) 
 
     sorted_data = sorted(data)
 
@@ -31,3 +35,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+main()
