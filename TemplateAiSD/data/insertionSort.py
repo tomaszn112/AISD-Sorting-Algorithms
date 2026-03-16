@@ -1,4 +1,4 @@
-def insertion_sort(arr):
+def insertionSort(arr):
     data = arr.copy()
     for i in range(1, len(data)):
         key = data[i]

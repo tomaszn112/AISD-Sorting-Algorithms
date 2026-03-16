@@ -1,17 +1,6 @@
 import sys
 import random
-
-# 1. Sortowanie przez wstawianie (Insertion Sort)
-def insertion_sort(arr):
-    data = arr.copy()
-    for i in range(1, len(data)):
-        key = data[i]
-        j = i - 1
-        while j >= 0 and key < data[j]:
-            data[j + 1] = data[j]
-            j -= 1
-        data[j + 1] = key
-    return data
+from insertionSort import insertionSort
 
 # 2. Sortowanie przez wybieranie (Selection Sort)
 def selection_sort(arr):
@@ -27,7 +16,7 @@ def selection_sort(arr):
 # GŁÓWNY ROUTER ALGORYTMÓW
 def sort_using_algorithm(data, algorithm):
     if algorithm == 1:
-        return insertion_sort(data)
+        return insertionSort(data)
     elif algorithm == 2:
         return selection_sort(data)
     else:
