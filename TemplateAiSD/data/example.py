@@ -5,7 +5,7 @@ from insertionSort import insertionSort
 from selectionSort import selectionSort
 from heapsort import heapsort
 from shellSort import shellSort
-
+from quickSort import quickSortLeft, quickSortRandom
 #Wybór algorytmu
 def sort_using_algorithm(data, algorithm):
     if algorithm == 1:
@@ -16,6 +16,10 @@ def sort_using_algorithm(data, algorithm):
         return heapsort(data)
     elif algorithm == 4:
         return shellSort(data)
+    elif algorithm == 5:
+        return quickSortLeft(data)
+    elif algorithm == 6:
+        return quickSortRandom(data)
     else:
         print("Nieznany algorytm! Używam domyślnego Pythona.")
         return sorted(data)
@@ -55,6 +59,8 @@ def main():
         print("2 - Selection Sort")
         print("3 - Heap Sort")
         print("4 - Shell Sort")
+        print("5 - Quick Sort (Lewy Pivot)")
+        print("6 - Quick Sort (Losowy Pivot)")
         algorithmChoice = int(input("Twój wybór algorytmu: "))
         
         sortedData = sort_using_algorithm(data, algorithmChoice)
