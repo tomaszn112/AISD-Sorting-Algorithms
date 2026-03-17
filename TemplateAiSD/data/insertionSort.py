@@ -1,10 +1,9 @@
-def insertionSort(arr):
-    data = arr.copy()
-    for i in range(1, len(data)):
-        key = data[i]
+def insertionSort(lst):
+    for i in range(1, len(lst)):
+        key = lst[i]
         j = i - 1
-        while j >= 0 and key < data[j]:
-            data[j + 1] = data[j]
+        while j >= 0 and key < lst[j]:
+            lst[j + 1] = lst[j]
             j -= 1
-        data[j + 1] = key
-    return data
+        lst[j + 1] = key
+    return lst
