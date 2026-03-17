@@ -4,6 +4,7 @@ import generate
 from insertionSort import insertionSort
 from selectionSort import selectionSort
 from heapsort import heapsort
+from shellSort import shellSort
 
 #Wybór algorytmu
 def sort_using_algorithm(data, algorithm):
@@ -13,6 +14,8 @@ def sort_using_algorithm(data, algorithm):
         return selectionSort(data)
     elif algorithm == 3:
         return heapsort(data)
+    elif algorithm == 4:
+        return shellSort(data)
     else:
         print("Nieznany algorytm! Używam domyślnego Pythona.")
         return sorted(data)
@@ -51,6 +54,7 @@ def main():
         print("1 - Insertion Sort")
         print("2 - Selection Sort")
         print("3 - Heap Sort")
+        print("4 - Shell Sort")
         algorithmChoice = int(input("Twój wybór algorytmu: "))
         
         sortedData = sort_using_algorithm(data, algorithmChoice)
