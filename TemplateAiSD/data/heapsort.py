@@ -13,6 +13,7 @@ def siftDown(lst, i, upper):
                 i = leftChild
             else:
                 swap(lst, i, rightChild)
+                i = rightChild
         elif leftChild < upper:
             if lst[leftChild] > lst[i]:
                 swap(lst, i, leftChild)
@@ -21,7 +22,7 @@ def siftDown(lst, i, upper):
                 break
         elif rightChild < upper:
             if lst[rightChild] > lst[i]:
-                swap(lst, i, r)
+                swap(lst, i, rightChild)
                 i = rightChild
             else:
                 break
