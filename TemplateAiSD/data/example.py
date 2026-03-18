@@ -1,11 +1,11 @@
 import sys
-import random
 import generate
 from insertionSort import insertionSort
 from selectionSort import selectionSort
 from heapsort import heapsort
 from shellSort import shellSort
 from quickSort import quickSortLeft, quickSortRandom
+
 #Wybór algorytmu
 def sort_using_algorithm(data, algorithm):
     if algorithm == 1:
@@ -20,11 +20,7 @@ def sort_using_algorithm(data, algorithm):
         return quickSortLeft(data)
     elif algorithm == 6:
         return quickSortRandom(data)
-    else:
-        print("Nieznany algorytm! Używam domyślnego Pythona.")
-        return sorted(data)
-
-
+    
 def main():
     if len(sys.argv) == 1:
         print("ALGORYTMY SORTOWANIA")          
